@@ -1,0 +1,82 @@
+body{
+    background-color: rgb(40, 38, 38);
+}
+#hero{
+    width: 100%;
+    height: 50vh;
+}
+#hero h1{
+    margin: 0 0 0 0;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 52px;
+    color: white;
+}
+.d-flex{
+    display: flex;
+}
+.align-items-center{
+    align-items: center;
+}
+.justify-content-center{
+    justify-content: center;
+}
+.flex-column{
+    flex-direction: column;
+}
+section{
+    padding: 60px 0;
+    overflow: hidden;
+}
+section {
+    display: block;
+}
+.section-title h2{
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    margin-left: 300px;
+    position: relative;
+    color: white;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.box1{
+    margin-left: 300px;
+    display: flex;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.info{
+    width: 100%;
+}
+h4{
+    color: white;
+}
+p{
+    color: white;
+}
+a{
+    color: white;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin-left: 300px;
+    width: fit-content;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .cardcon {
+    padding: 2px 16px;
+  }
+  img{
+    width: 300px;
+    height: 400px;
+  }
