@@ -1,20 +1,39 @@
-body {
-    background-color: rgb(40, 38, 38);
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    background-color: rgb(40, 38, 38);
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section */
 #hero {
     width: 100%;
     height: 50vh;
+    min-height: 300px;
 }
 
 #hero h1 {
-    margin: 0 0 0 0;
+    margin: 0;
     font-size: 60px;
     font-weight: 700;
-    line-height: 52px;
+    line-height: 1.2;
     color: white;
+    text-align: center;
 }
 
+.joo {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+/* Utility Classes */
 .d-flex {
     display: flex;
 }
@@ -31,13 +50,16 @@ body {
     flex-direction: column;
 }
 
+/* Sections */
 section {
-    padding: 60px 0;
+    padding: 60px 20px;
     overflow: hidden;
 }
 
-section {
-    display: block;
+.section-title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .section-title h2 {
@@ -45,69 +67,319 @@ section {
     font-weight: bold;
     margin-bottom: 20px;
     padding-bottom: 20px;
-    margin-left: 300px;
+    margin-left: 0;
     position: relative;
     color: white;
 }
 
+/* Container and Layout */
 .container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .row {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .box1 {
-    margin-left: 300px;
     display: flex;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding: 0 20px;
+    width: 100%;
+    justify-content: center;
 }
 
 .info {
     width: 100%;
+    max-width: 600px;
 }
 
+/* Typography */
 h4 {
     color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 p {
     color: white;
+    line-height: 1.6;
 }
 
 a {
     color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
 }
 
+a:hover {
+    opacity: 0.7;
+}
+
+/* Cards */
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     padding: 10px;
     margin: 10px;
-    width: fit-content;
+    width: 320px;
+    background-color: rgba(60, 58, 58, 0.8);
 }
 
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
 }
 
 .cardcon {
     padding: 2px 16px;
+    min-height: 120px;
 }
 
-img {
-    width: 300px;
+.card img {
+    width: 100%;
     height: 400px;
-}
-
-.contact-container {
- display: block;   
+    object-fit: cover;
+    display: block;
 }
 
 .text {
     max-width: 300px;
+}
+
+.contact-container {
+    display: block;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.email, .Github {
+    margin-bottom: 20px;
+}
+
+.Github a {
+    display: inline-block;
+    margin: 5px 0;
+}
+
+/* Media Queries */
+
+/* Large Desktop - 1920x1080 */
+@media screen and (min-width: 1600px) {
+    .container {
+        max-width: 1600px;
+    }
+    
+    .section-title h2 {
+        font-size: 40px;
+    }
+    
+    #hero h1 {
+        font-size: 72px;
+    }
+    
+    .joo {
+        font-size: 28px;
+    }
+}
+
+/* Standard Desktop - 1440x1080 */
+@media screen and (max-width: 1599px) and (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+    
+    .card {
+        width: 300px;
+    }
+    
+    .card img {
+        height: 380px;
+    }
+}
+
+/* Medium Desktop/Laptop - 1200x720 */
+@media screen and (max-width: 1199px) and (min-width: 769px) {
+    .container {
+        max-width: 1000px;
+    }
+    
+    .section-title h2 {
+        font-size: 28px;
+    }
+    
+    #hero h1 {
+        font-size: 48px;
+    }
+    
+    .joo {
+        font-size: 20px;
+    }
+    
+    .card {
+        width: 280px;
+    }
+    
+    .card img {
+        height: 350px;
+    }
+    
+    section {
+        padding: 40px 20px;
+    }
+}
+
+/* Mobile Landscape/Small Tablet - 420x920 */
+@media screen and (max-width: 768px) and (min-width: 421px) {
+    #hero {
+        height: 40vh;
+    }
+    
+    #hero h1 {
+        font-size: 40px;
+    }
+    
+    .joo {
+        font-size: 18px;
+    }
+    
+    .section-title h2 {
+        font-size: 26px;
+    }
+    
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+    }
+    
+    .card {
+        width: 90%;
+        max-width: 380px;
+        margin: 10px 0;
+    }
+    
+    .card img {
+        height: 300px;
+    }
+    
+    section {
+        padding: 30px 15px;
+    }
+    
+    .box1 {
+        padding: 0 15px;
+    }
+}
+
+/* Small Mobile - 380x680 */
+@media screen and (max-width: 420px) {
+    #hero {
+        height: 35vh;
+        min-height: 250px;
+    }
+    
+    #hero h1 {
+        font-size: 32px;
+        padding: 0 10px;
+    }
+    
+    .joo {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+    
+    .section-title h2 {
+        font-size: 24px;
+        padding: 0 10px;
+    }
+    
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+    }
+    
+    .card {
+        width: 100%;
+        max-width: 340px;
+        margin: 10px 0;
+        padding: 8px;
+    }
+    
+    .card img {
+        height: 280px;
+    }
+    
+    .cardcon {
+        padding: 10px;
+        min-height: 100px;
+    }
+    
+    h4 {
+        font-size: 18px;
+    }
+    
+    p {
+        font-size: 14px;
+    }
+    
+    section {
+        padding: 25px 10px;
+    }
+    
+    .box1 {
+        padding: 0 10px;
+    }
+    
+    .info {
+        font-size: 14px;
+    }
+    
+    .text {
+        max-width: 100%;
+    }
+}
+
+/* Extra Small Mobile - below 380px */
+@media screen and (max-width: 379px) {
+    #hero h1 {
+        font-size: 28px;
+    }
+    
+    .joo {
+        font-size: 14px;
+    }
+    
+    .section-title h2 {
+        font-size: 22px;
+    }
+    
+    .card {
+        max-width: 300px;
+    }
+    
+    .card img {
+        height: 250px;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    #hero {
+        height: 60vh;
+    }
+    
+    section {
+        padding: 30px 20px;
+    }
 }
